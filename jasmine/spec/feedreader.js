@@ -31,7 +31,21 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+         function iterateObjs(obj){
+            it('has urls', function(){
+                expect(obj.url).toBeDefined();
+                expect(obj.url.length).not.toBe(0);
+            })
 
+            it('has names', function(){
+                expect(obj.name).toBeDefined();
+                expect(obj.name.length).not.toBe(0);
+            })
+         }
+
+          for(var x = 0; x < allFeeds.length; x++) {
+            iterateObjs(allFeeds[x]);
+          }
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
@@ -39,9 +53,15 @@ $(function() {
          */
     });
 
+    describe('The menu', function(){
+      
+        const body = document.getElementsByTagName('body');
+        const classArr = Array.prototype.slice.call(body[0].classList);
+        const menuHidden = classArr.indexOf("menu-hidden");
 
-    /* TODO: Write a new test suite named "The menu" */
-
+        it('is hidden', function(){
+            expect(menuHidden).not.toBe(-1)         
+        })
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
@@ -53,7 +73,9 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+    });
 
+    describe('Initial Entries', function(){
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
@@ -69,4 +91,5 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    });
 }());
