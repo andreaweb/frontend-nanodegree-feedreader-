@@ -1,0 +1,22 @@
+{
+  "name": "frontend-nanodegree-feedreader",
+  "version": "1.0.0",
+  "description": "second project for udacity's advanced front-end nanodegree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreaweb/frontend-nanodegree-feedreader-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreaweb/frontend-nanodegree-feedreader-/issues"
+  },
+  "homepage": "https://github.com/andreaweb/frontend-nanodegree-feedreader-#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.6"
+  }
+}
