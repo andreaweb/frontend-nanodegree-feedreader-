@@ -66,14 +66,12 @@ $(function() {
         it('is shown when clicked', function(){
             var spyEvent = spyOnEvent(menuLink[0], 'click')
                 $(menuLink[0]).click();
-                console.log(body[0])
             expect(body[0]).not.toHaveClass("menu-hidden") 
         })
 
         it('is hidden when clicked again', function(){
             var spyEvent = spyOnEvent(menuLink[0], 'click')
                 $(menuLink[0]).click();
-                console.log(body[0])
             expect(body[0]).toHaveClass("menu-hidden") 
         }) 
     });
@@ -88,6 +86,13 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
+
+        it('loads feeds', function(){
+            expect($('.feed .entry').length).toBeGreaterThan(0);
+        })
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
@@ -95,5 +100,29 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    });
+
+    describe('New Feed Selection', function(){
+        beforeEach(function(done) {
+            loadFeed(1, done);
+        });
+
+        let arr = document.getElementsByClassName("entry");
+
+        
+
+        console.log(arr);
+
+        it('changes content', function(){
+        let firstEntry = $(arr[0]).find('h2').text();
+        let secondEntry = $(arr[1]).find('h2').text();
+        console.log(firstEntry)
+        console.log(secondEntry)
+        console.log(firstEntry === secondEntry);
+        console.log(firstEntry === firstEntry);
+        console.log(firstEntry === "Your Body Text is Too Small")
+            expect(firstEntry === secondEntry).toBeFalsy();
+        })
+
     });
 }());
