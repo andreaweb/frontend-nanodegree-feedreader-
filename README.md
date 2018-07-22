@@ -11,6 +11,7 @@
 
 <ul>
 	<li>Open your terminal and type: <code>browser-sync start --config bs-config.js</code>.</li>
+	<li>Simply opening the .html file in your favorite browser should also be enough.</li>
 </ul>
 
 
