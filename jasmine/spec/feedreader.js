@@ -65,13 +65,13 @@ $(function() {
 
         it('is shown when clicked', function(){
             var spyEvent = spyOnEvent(menuLink[0], 'click')
-                $(menuLink[0]).click();
+            $(menuLink[0]).click();
             expect(body[0]).not.toHaveClass("menu-hidden") 
         })
 
         it('is hidden when clicked again', function(){
             var spyEvent = spyOnEvent(menuLink[0], 'click')
-                $(menuLink[0]).click();
+            $(menuLink[0]).click();
             expect(body[0]).toHaveClass("menu-hidden") 
         }) 
     });
@@ -107,20 +107,11 @@ $(function() {
             loadFeed(1, done);
         });
 
-        let arr = document.getElementsByClassName("entry");
-
-        
-
-        console.log(arr);
+        const arr = document.getElementsByClassName("entry");
 
         it('changes content', function(){
-        let firstEntry = $(arr[0]).find('h2').text();
-        let secondEntry = $(arr[1]).find('h2').text();
-        console.log(firstEntry)
-        console.log(secondEntry)
-        console.log(firstEntry === secondEntry);
-        console.log(firstEntry === firstEntry);
-        console.log(firstEntry === "Your Body Text is Too Small")
+            const firstEntry = $(arr[0]).find('h2').text();
+            const secondEntry = $(arr[1]).find('h2').text();
             expect(firstEntry === secondEntry).toBeFalsy();
         })
 
