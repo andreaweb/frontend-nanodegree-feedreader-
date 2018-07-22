@@ -4,13 +4,13 @@
 <h3>To install the application</h3>
 
 <ul>
-	<li>Download it and run ´´´npm install´´´</li>
+	<li>Download it and run <code>npm install</code></li>
 </ul>
 
 <h3>To run the application</h3>
 
 <ul>
-	<li>Open your terminal and type: ´´´browser-sync start --config bs-config.js´´´.</li>
+	<li>Open your terminal and type: <code>browser-sync start --config bs-config.js</code>.</li>
 </ul>
 
 
