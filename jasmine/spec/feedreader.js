@@ -48,12 +48,10 @@ $(function() {
 
         /*when menu is clicked, it should toggle*/
         it('is shown when clicked', function(){
-            var spyEvent = spyOnEvent(menuLink[0], 'click')/*spyOnEvent is a jasmine-jquery event, please make sure jasmine-jquery is in your project*/
             $(menuLink[0]).click();
             expect($('body').hasClass("menu-hidden")).toBe(false) 
         })
         it('is hidden when clicked again', function(){
-            var spyEvent = spyOnEvent(menuLink[0], 'click')
             $(menuLink[0]).click();
             expect($('body').hasClass("menu-hidden")).toBe(true) 
         }) 

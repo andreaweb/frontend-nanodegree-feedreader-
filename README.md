@@ -4,7 +4,7 @@
 <h3>To install the application</h3>
 
 <ul>
-	<li>Download it and run <code>npm install</code></li>
+	<li>Download it and run <code>npm install</code> if you'd like to use browser-sync</li>
 </ul>
 
 <h3>To run the application</h3>
